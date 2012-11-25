@@ -1,0 +1,233 @@
+/*
+CSS for the demo: Recreating the Nikebetterworld.com Parallax Demo
+Demo: Recreating the Nikebetterworld.com Parallax Demo
+Author: Ian Lunn
+Author URL: http://www.ianlunn.co.uk/
+Demo URL: http://www.ianlunn.co.uk/demos/recreate-nikebetterworld-parallax/
+Tutorial URL: http://www.ianlunn.co.uk/blog/code-tutorials/recreate-nikebetterworld-parallax/
+
+License: http://creativecommons.org/licenses/by-sa/3.0/ (Attribution Share Alike). Please attribute work to Ian Lunn simply by leaving these comments in the source code or if you'd prefer, place a link on your website to http://www.ianlunn.co.uk/.
+
+Dual licensed under the MIT and GPL licenses:
+http://www.opensource.org/licenses/mit-license.php
+http://www.gnu.org/licenses/gpl.html
+*/
+
+@charset "utf-8";
+/* CSS Document */
+
+/* reset */
+html, body, div, span,
+applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dd, dl, dt, li, ol, ul,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+  {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: baseline;
+  }
+a img, :link img, :visited img
+  {
+  border: 0;
+  }
+table
+  {
+  border-collapse: collapse;
+  border-spacing: 0;
+  }
+ol, ul
+  {
+  list-style: none;
+  }
+blockquote:before, blockquote:after
+  {
+  content: "";
+  }
+/* end reset */
+
+body{
+	background: url('images/bg-medium.jpg');
+	margin: 0;
+	min-width: 980px;
+	padding: 0;
+}
+
+
+.outer {
+	background: url('images/bg-clouds-alt.png') -150% 20px repeat;
+}
+
+.inner {
+	background: url('images/bg-page-top.png') repeat-x;
+}
+
+p{
+	margin: 0 0 20px 0;
+	background-color: black;
+	opacity: 0.6;
+}
+
+p, ul{
+	font-family:"Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size-adjust:0.488;
+	font-weight:200;
+	font-style:normal;
+}
+
+img{
+	border: 0;
+}
+
+h1{
+	font-family: 'Cinzel+Decorative', sans-serif;
+	font-weight:700;
+	font-style:normal;
+	font-size: 44px;
+	margin: auto;
+}
+
+h2{
+	font-family:"Beau Sans Pro Book", Verdana, sans-serif;
+	font-size-adjust:0.531;
+	font-weight:500;
+	font-style:normal;
+	background-color: black;
+	opacity: 0.6;
+}
+
+.float-left{
+	float: left;
+	margin: 0 0 0 20px;
+}
+
+.float-right{
+	float: right;
+	margin: 0 20px 0 0;
+}
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0;
+	text-align: center;
+}
+
+#nav{
+	background: black;
+	opacity: 0.6;
+	list-style: none;
+	position: fixed;
+	right: 20px;
+}
+
+#nav li{
+	margin: 0 0 15px 0;
+}
+
+#nav li a{
+	color: white;
+	font-weight:500;
+	padding: 15px;
+	text-decoration: none;
+}
+
+#header, #intro, #second{
+	width: 100%;
+}
+
+#header{
+	padding: 20px;
+	height: 50px;
+}
+
+#intro{
+	background:url(images/firstBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 600px;
+	margin: 0;
+	padding: 160px 0 0 0;
+}
+
+#second{
+	background: url(images/secondBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
+
+#second .bg{
+  background: url(images/bucky.png) 50% 0 no-repeat fixed;
+  height: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  width: 900px;
+  z-index: 200;
+}
+
+
+#third{
+	background: url(images/thirdBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 650px;
+	padding: 100px 0 0 0;
+}
+
+#fourth{
+	background: url(images/balloon1.jpeg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 844px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
+
+#fourth .bg{
+  background: url(images/balloon2.png) 50% 0 repeat-y fixed;
+  height: 844px;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  width: 900px;
+  z-index: 200;
+}
+
+#fifth{
+	background: #ccc;
+	color: white;
+	height: 1000px;
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+}
+
+#sixth{
+	background: url(images/sixthBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 650px;
+	padding: 100px 0 0 0;
+}
+
+.story{
+	margin: 0 auto;
+	min-width: 980px;
+	width: 980px;
+}
+
+.story .float-left, .story .float-right{
+	padding: 100px 0 0 0;
+	position: relative;
+	width: 350px;
+}

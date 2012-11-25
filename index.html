@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Kerkman-Pulec Wedding</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="demo-style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/nbw-parallax.js"></script>
+<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript" src="scripts/jquery.inview.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#nav').localScroll();
+})
+</script>
+
+<link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div id="demo-details" class="bottom">
+        <div id="demo-links" class="float-left">
+            <ul>
+                <li><a href="http://www.ianlunn.co.uk/demos/recreate-nikebetterworld-parallax/recreate-nikebetterworld-parallax.zip" title="Nikebetterworld.com Parallax Demo">Nikebetterworld.com Parallax</a></li>
+                <li><a href="http://www.ianlunn.co.uk/blog/code-tutorials/recreate-nikebetterworld-parallax/" title="Recreate NikeBetterWorld Parallax Demo">Tutorial</a></li>
+            </ul>
+        </div>
+        <ul id="share">
+            <li class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-via="IanLunn" data-related="IanLunn" data-count="none">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+            <li class="facebook"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.ianlunn.co.uk%2Fdemos%2Fajax-search-suggest-wearehunted%2F&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:21px;" allowTransparency="true"></iframe></li>
+            <li class="twitter"><g:plusone size="medium" annotation="none"></g:plusone></li>
+            <li class="hire"><a href="http://www.ianlunn.co.uk/" title="Hire Ian Lunn Design"><img src="http://www.ianlunn.co.uk//demo-assets/hire-ian.png" alt="Hire Ian Lunn Design"></a></li>
+        </ul>
+    </div>
+
+<ul id="nav">
+    <li><a href="#intro" title="Next Section">Intro</a></li>
+    <li><a href="#second" title="Next Section">About</a></li>
+    <li><a href="#third" title="Next Section">Ceremony</a></li>
+    <li><a href="#fourth" title="Next Section">RSVP</a></li>
+    <li><a href="#fifth" title="Next Section">Registry</a></li>
+    <li><a href="#sixth" title="Next Section">Contact</a></li>
+</ul>
+
+    <div class='outer'>
+        <div class='inner'>
+            <div id="header">
+                <div class="story">
+                    <h1>Kerkman Pulec Wedding</h1>
+                </div> <!--.story-->
+            </div> <!--#header-->
+
+            <div id="intro">
+                <div class="story">
+                    <div class="float-left">
+                    <h2>(Almost) Static Background</h2>
+                    <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
+                    </div>
+                </div> <!--.story-->
+            </div> <!--#intro-->
+
+            <div id="second">
+                <div class="story">
+                    <div class="float-right">
+                        <h2>Multiple Backgrounds</h2>
+                        <p>The multiple backgrounds applied to this section are moved in a similar way to the first section -- every time the user scrolls down the page by a pixel, the positions of the backgrounds are changed.</p>
+                        <img src='images/bucky.png' />
+                    </div>
+                </div> <!--.story-->
+            </div> <!--#second-->
+
+            <div id="third">
+                <div class="story">
+                    <div class="float-left">
+                        <h2>What Happens When JavaScript is Disabled?</h2>
+                        <p>The user gets a slap! Actually, all that jQuery does is moves the backgrounds relative to the position of the scrollbar. Without it, the backgrounds simply stay put and the user would never know they are missing out on the awesome! CSS2 does a good enough job to still make the effect look cool.</p>
+                    </div>
+                </div> <!--.story-->
+            </div> <!--#third-->
+
+            <div id="fourth">
+                <div class="story">
+                    <div class="bg"></div>
+                    <div class="float-left">
+                        <h2>Empty Containers vs CSS3 Multiple Backgrounds</h2>
+                        <p><em>This section only works in modern browsers that support multiple backgrounds.</em></p>
+                        <p>The Nikebetterworld.com demo uses only CSS2 to create it's parallax effect. It uses empty containers in each section to give the impression of multiple backgrounds, which is the method I used for the image of the trainers. It's actually possible to achieve the same effect using CSS3s multiple backgrounds -- as I've done with the bubbles in this section, although, it will only work in modern browsers that support CSS3 multiple backgrounds.</p>
+                        <p>The use of CSS3 means less markup and jQuery, making the script slightly quicker.</p>
+                    </div>
+                </div> <!--.story-->
+            </div> <!--#fourth-->
+
+
+            <div id="second">
+                <div class="story"><div class="bg"></div>
+                    <div class="float-right">
+                        <h2>Multiple Backgrounds</h2>
+                        <p>The multiple backgrounds applied to this section are moved in a similar way to the first section -- every time the user scrolls down the page by a pixel, the positions of the backgrounds are changed.</p>
+                    </div>
+                </div> <!--.story-->
+            </div> <!--#second-->
+
+            <div id="sixth">
+                <div class="story"><div class="bg"></div>
+                    <div class="float-right">
+                        <h2>Multiple Backgrounds</h2>
+                        <p>The multiple backgrounds applied to this section are moved in a similar way to the first section -- every time the user scrolls down the page by a pixel, the positions of the backgrounds are changed.</p>
+                    </div>
+                </div> <!--.story-->
+            </div> <!--#second-->
+
+            <div id="fifth">
+                <div class="story">
+                    <h2>More Stuff!</h2>
+                </div> <!--.story-->
+            </div> <!--#fifth-->
+        </div>
+    </div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11991680-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
