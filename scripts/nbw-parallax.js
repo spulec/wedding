@@ -22,6 +22,7 @@ $(document).ready(function() { //when the document is ready...
 	var $secondBG = $('#second');
 	var $thirdBG = $('#third');
 	var $fourthBG = $('#fourth');
+	var $fifthBG = $('#fifth');
 	var trainers = $("#second .bg");
 	var balloons = $("#fourth .bg");
 
@@ -29,7 +30,7 @@ $(document).ready(function() { //when the document is ready...
 
 
 	//apply the class "inview" to a section that is in the viewport
-	$('#intro, #second, #third, #fourth').bind('inview', function (event, visible) {
+	$('#intro, #second, #third, #fourth, #fifth').bind('inview', function (event, visible) {
 			if (visible == true) {
 			$(this).addClass("inview");
 			} else {
@@ -95,6 +96,10 @@ $(document).ready(function() { //when the document is ready...
 			balloons.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.6)});
 		}
 
+		if($fifthBG.hasClass("inview")){
+			//call the newPos function and change the background position
+			$fifthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 5450, 0.3)});
+		}
 
 		$('#pixels').html(pos); //display the number of pixels scrolled at the bottom of the page
 	}
