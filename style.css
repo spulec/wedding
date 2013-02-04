@@ -29,10 +29,10 @@ table, caption, tbody, tfoot, thead, tr, th, td
   {
   border: 0;
   font-family: inherit;
-  font-size: 100%;
+  font-size: 16px;
   font-style: inherit;
   font-weight: inherit;
-  line-height: 1;
+  line-height: 20px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -75,12 +75,12 @@ body{
 
 p{
 	margin: 0 0 20px 0;
-	background-color: black;
-	opacity: 0.6;
-}
+/*	background-color: black;
+	opacity: 0.7;
+*/}
 
 p, ul{
-	font-family:"Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-family:'Helvetica Neue', Arial, Helvetica, sans-serif;
 	font-size-adjust:0.488;
 	font-weight:200;
 	font-style:normal;
@@ -103,13 +103,12 @@ h2{
 	font-size-adjust:0.531;
 	font-weight:500;
 	font-style:normal;
-	background-color: black;
-	opacity: 0.6;
+	opacity: 0.7;
 }
 
 .float-left{
 	float: left;
-	margin: 0 0 0 20px;
+	margin: 0 0 0 -70px;
 }
 
 .float-right{
@@ -118,22 +117,92 @@ h2{
 }
 
 .after,
-.before {
+.before{
   position: absolute;
-  top: 0;
-  height: 80px;
+  top: 0px;
+  height: 100%;
 }
 
-.before {
-  background: url(images/aboutus_before_bg.png) 0 0 no-repeat transparent;
+.about{
+  position: absolute;
+  top: 0px;
+}
+
+#header .story .after, #header .story .before {
+  position: absolute;
+  top: 0px;
+  height: 80px;
   width: 63px;
+}
+
+
+.before {
   left: -27px;
+  z-index: 3;
+}
+.before .start{
+  background: url(images/top_left.png) 0 0 no-repeat transparent;
+  height: 32px;
+  width: 63px;
+}
+.before .middle{
+  background: url(images/aboutus_before_bg.png) 0 0 transparent;
+  background-position: 0 0px;
+  height: 100%;
+  width: 63px;
+}
+.before .end{
+  background: url(images/bottom_left.png) 0 0 no-repeat transparent;
+  height: 32px;
+  width: 63px;
+  position: absolute;
 }
 
 .after {
-  background: url(images/aboutus_after_bg.png) 0 0 no-repeat transparent;
-  width: 57px;
-  right: -17px;
+  right: -27px;
+  z-index: 3;
+}
+.after .start{
+  background: url(images/top_right.png) 0 0 no-repeat transparent;
+  height: 32px;
+  width: 63px;
+}
+.after .middle{
+  background: url(images/aboutus_after_bg.png) 0 0 repeat-y transparent;
+  background-position: 0 0px;
+  height: 100%;
+  width: 63px;
+}
+.after .end{
+  background: url(images/bottom_right.png) 0 0 no-repeat transparent;
+  height: 32px;
+  width: 63px;
+  position: absolute;
+}
+
+.about {
+  z-index: 4;
+}
+.about-top{
+  background: url(images/aboutus_bg_top.png) top center no-repeat;
+  height: 23px;
+  width: 100%;
+}
+.about-middle{
+  background: url(images/aboutus_bg.png) repeat;
+  background-position: 0 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+.about-middle p{
+  z-index: 4;
+}
+.about-bottom{
+  background: url(images/aboutus_bg_bottom.png) bottom center no-repeat;
+  position: absolute;
+  height: 25px;
+  width: 100%;
 }
 
 .center{
@@ -183,7 +252,7 @@ h2{
 }
 
 .ceremony .location {
-    background: url(images/place_pin.png) 0 2px no-repeat transparent;
+    background: url(images/place_pin.png) 0 60px no-repeat transparent;
     color: #809498;
     font-size: 1.1em;
     line-height: 270%;
@@ -191,6 +260,7 @@ h2{
     text-align: center;
     text-transform: uppercase;
     padding-left: 30px;
+    padding-top: 50px;
     display: inline-block;
     zoom: 1;
 }
@@ -220,7 +290,7 @@ h2{
 
 #nav{
 	background: black;
-	opacity: 0.6;
+	opacity: 0.7;
 	list-style: none;
 	position: fixed;
 	right: 20px;
@@ -278,7 +348,7 @@ h2{
   z-index: 5;
 }
 
-.name .before {
+.name-before {
   background: url(images/name_before_bg.png) 0 0 repeat-x transparent;
   display: block;
   height: 84px;
@@ -288,13 +358,14 @@ h2{
   top: 1px;
 }
 
-.name .after {
+.name-after {
   background: url(images/name_after_bg.png) 0 0 repeat-x transparent;
   display: block;
   height: 84px;
   width: 19px;
   position: absolute;
   right: -18px;
+  top: 0px;
 }
 
 #header, #intro, #second{
@@ -308,6 +379,7 @@ h2{
 
 #header .story {
   background: url(images/aboutus_bg.png) top center repeat-x;
+  background-size: 100%;
   position: relative;
   height: 80px;
 }
@@ -318,7 +390,6 @@ h2{
 
 #intro{
 	background: url(images/firstBG.jpg) 50% center no-repeat fixed;
-	color: white;
 	height: 600px;
 	margin: 0;
 	padding: 160px 0 0 0;
@@ -326,7 +397,6 @@ h2{
 
 #second{
 	background: url(images/secondBG.jpg) 50% 0 no-repeat fixed;
-	color: white;
 	height: 1300px;
 	margin: 0 auto;
 	overflow: hidden;
@@ -346,21 +416,23 @@ h2{
 
 #third{
 	background: url(images/thirdBG.jpg) 50% 0 no-repeat fixed;
-	color: white;
 	height: 650px;
 	padding: 100px 0 0 0;
 }
 
+#third h2{
+  padding-top: 40px;
+}
+
 #fourth{
 	background: url(images/balloon1.jpeg) 50% 0 no-repeat fixed;
-	color: white;
 	height: 844px;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 0;
 }
 
-#fourth .bg{
+/*#fourth .bg{
   background: url(images/balloon2.png) 50% 0 repeat-y fixed;
   height: 844px;
   margin: 0 auto;
@@ -368,13 +440,12 @@ h2{
   position: absolute;
   width: 900px;
   z-index: 200;
-}
+}*/
 
 #fifth{
 	background: url(images/sixthBG.jpg) 50% 0 no-repeat fixed;
-	color: white;
-	height: 650px;
-  margin-top: 100px;
+	height: 638px;
+  margin-top: 0px;
 	padding: 200px 0 0 0;
 }
 
@@ -382,10 +453,25 @@ h2{
 	margin: 0 auto;
 	min-width: 980px;
 	width: 980px;
+  z-index: 1;
 }
 
-.story .float-left, .story .float-right{
-	padding: 100px 0 0 0;
+.story .float-left{
+  background-position: 0 0px;
 	position: relative;
 	width: 350px;
+  z-index: 2;
+}
+
+.story .float-right{
+  background-position: center 0px;
+  padding: 100px 0 0 0;
+  position: relative;
+  height: 280px;
+  width: 350px;
+}
+
+
+.story p {
+  padding: 30px 0px 0px 0px;
 }
