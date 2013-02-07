@@ -28,13 +28,6 @@ $(document).ready(function() { //when the document is ready...
 
 	var windowHeight = $window.height(); //get the height of the window
 
-	var userAgent = navigator.userAgent;
-	if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-	   // iPad or iPhone
-	   return
-	}
-
-
 	//apply the class "inview" to a section that is in the viewport
 	$('#intro, #second, #third, #fourth, #fifth').bind('inview', function (event, visible) {
 			if (visible == true) {
