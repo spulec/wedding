@@ -3,13 +3,6 @@
  * url http://remysharp.com/2009/01/26/element-in-view-event-plugin/
  */
 (function ($) {
-
-    var userAgent = navigator.userAgent;
-    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-       // iPad or iPhone
-       return
-    }
-
     function getViewportHeight() {
         var height = window.innerHeight; // Safari, Opera
         var mode = document.compatMode;
