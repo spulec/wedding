@@ -52,6 +52,13 @@
         }
     });
 
+    var userAgent = navigator.userAgent;
+    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+       // iPad or iPhone
+       return
+    }
+
+
     // kick the event to pick up any elements already in view.
     // note however, this only works if the plugin is included after the elements are bound to 'inview'
     $(function () {
