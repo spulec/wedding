@@ -128,14 +128,18 @@ if (screen.width > 1024) {
 		// other variables
 		var windowHeight = $window.height();
 		var windowWidth = $window.width();
-		$('.story').css('background-size', windowWidth);
+		$('.panel').css('height', windowWidth);
+		$('.panel, .story').css('background-size', windowWidth);
 		// $('#it-happened, #title').css('height', windowWidth * .65);
+		// $('#invitation.panel').css('height', 'auto');
 
 		window.onorientationchange = function() {
 			var windowHeight = $window.height();
 			var windowWidth = $window.width();
-			$('.story').css('background-size', windowWidth);
+			$('.panel').css('height', windowWidth);
+			$('.panel, .story').css('background-size', windowWidth);
 			// $('#it-happened, #title').css('height', windowWidth * .65);
+			// $('#invitation.panel').css('height', 'auto');
 		}
 	});
 }
