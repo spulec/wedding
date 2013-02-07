@@ -134,5 +134,6 @@ if (screen.width > 1024) {
 		// $('#invitation.panel').css('height', 'auto');
 		$('.panel').hide();
 		$('.ceremony').show();
+		$(".ceremony h2").css("top", "0px");
 	});
 }
