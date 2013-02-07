@@ -11,34 +11,16 @@
 <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
 <script type="text/javascript" src="scripts/jquery.inview.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-    $('#nav').localScroll();
-})
+    var userAgent = navigator.userAgent;
+    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+       // iPad or iPhone
+       return
+    } else {
+        $(document).ready(function(){
+            $('#nav').localScroll();
+        })
+    }
 
-/*
-- Intro
-- About us
-- How we met
-- Proposal
-- Wedding Info (location, time, directions)
-- RSVP/contact
-
-Intro (STD photo)
-This is the wedding website for Steve Pulec and Kelli Kerkman! If you're here, it's likely you've received a save the date. We hope you have the date marked on your calendar and would love for you to celebrate with us! Check back here for more details in the coming months, and we'll be sure to let you know about any major updates.
-
-After college, they moved to New York City to begin their careers. (Steve had a little bit of a head start.) They both work for startup companies and enjoy working for growing businesses while doing what they love.
-
-How We Met (Stairs w/ Bucky)
-Kelli and Steve met their sophomore year at the University of Wisconsin — Madison. Steve and his roommates created a social hub at their house and hosted several gatherings throughout the year. After several of these gatherings and a gentle nudge from a mutual friend, Kelli and Steve noticed they enjoyed many of the same books, films, and activities and realized that they really enjoyed each other's company. Steve asked Kelli out for dinner one night in February 2009, and the rest is history.
-
-How Steve Proposed (Cabin)
-Ever since they started dating, Steve had been meaning to show Kelli his Eagle Scout project at Heritage Hill State Park. (Fun fact: They both hold the highest awards their scouting organizations honor!) Each trip back home was always hectic or otherwise busy, but when they were in Green Bay for the wedding of Kelli's sister (the maid of honor, Jil!), Steve insisted on stopping by en route to the rehearsal.
-
-Kelli was hesitant to add the unexpected stop to the schedule, since they were already running late. Steve's sneaky persistance led her to allow 10 minutes at the park so Steve could show off the fence he built for the project.
-
-We arrived at the park, and were greeted by several hundred elementary school kids. (This was not part of the plan.) We walked down to the site of the project, and Steve explained that this spot reflected his proudest moment to date. Wanting to keep that site special, he dropped down on one knee and asked Kelli to spend the rest of their lives together. She said yes, and the oohs and aahs of the third grade class walking by quickly followed.
-
-*/
 </script>
 
 <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css'>
