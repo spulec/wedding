@@ -11,16 +11,9 @@
 <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
 <script type="text/javascript" src="scripts/jquery.inview.js"></script>
 <script type="text/javascript">
-    var userAgent = navigator.userAgent;
-    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-       // iPad or iPhone
-       return
-    } else {
-        $(document).ready(function(){
-            $('#nav').localScroll();
-        })
-    }
-
+    $(document).ready(function(){
+        $('#nav').localScroll();
+    })
 </script>
 
 <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css'>
