@@ -100,10 +100,11 @@ h1{
 
 h2{
 	font-family:"Beau Sans Pro Book", Verdana, sans-serif;
-	font-size-adjust:0.531;
+  font-size:24px;
 	font-weight:500;
 	font-style:normal;
 	opacity: 0.7;
+  padding-top: 10px;
 }
 
 .float-left{
@@ -213,7 +214,7 @@ h2{
 
 .ceremony {
     background: url(images/weddingparty_bg.jpg) center top repeat-x;
-    height: 410px;
+    height: 430px;
     position: relative;
     margin: auto;
     max-width: 960px;
@@ -294,6 +295,8 @@ h2{
 	list-style: none;
 	position: fixed;
 	right: 20px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 
 #nav li{
@@ -449,6 +452,13 @@ h2{
 	padding: 200px 0 0 0;
 }
 
+#sixth{
+  background: url(images/seventh.jpg) 50% 0 no-repeat fixed;
+  height: 1000px;
+  margin-top: 0px;
+  padding: 200px 0 0 0;
+}
+
 .story{
 	margin: 0 auto;
 	min-width: 980px;
@@ -475,3 +485,17 @@ h2{
 .story p {
   padding: 30px 0px 0px 0px;
 }
+
+
+#wufoo-form {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+#lb-nav { margin: 0 0 15px 0; }
+#lb-nav a { padding: 2px 6px; }
+#lb-nav strong { margin-right: 10px; }
+#roll-your-own-version .lb-nav-roll,
+#mediabox-version .lb-nav-moo,
+#colorbox-version .lb-nav-jq { color: white; text-decoration: none; background: #222; -moz-border-radius: 4px; -webkit-border-radius: 4px; color: white; pointer-events: none; cursor: default; },

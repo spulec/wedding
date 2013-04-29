@@ -25,13 +25,14 @@ if (screen.width > 1024) {
 		var $thirdBG = $('#third');
 		var $fourthBG = $('#fourth');
 		var $fifthBG = $('#fifth');
+		var $sixthBG = $('#sixth');
 		var trainers = $("#second .bg");
 		var balloons = $("#fourth .bg");
 
 		var windowHeight = $window.height(); //get the height of the window
 
 		//apply the class "inview" to a section that is in the viewport
-		$('#intro, #second, #third, #fourth, #fifth').bind('inview', function (event, visible) {
+		$('#intro, #second, #third, #fourth, #fifth, sixthBG').bind('inview', function (event, visible) {
 				if (visible == true) {
 				$(this).addClass("inview");
 				} else {
@@ -99,7 +100,12 @@ if (screen.width > 1024) {
 
 			if($fifthBG.hasClass("inview")){
 				//call the newPos function and change the background position
-				$fifthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 5450, 0.3)});
+				$fifthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 5250, 0.3)});
+			}
+
+			if($sixthBG.hasClass("inview")){
+				//call the newPos function and change the background position
+				$sixthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 5450, 0.3)});
 			}
 
 			$('#pixels').html(pos); //display the number of pixels scrolled at the bottom of the page

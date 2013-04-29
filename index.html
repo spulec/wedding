@@ -17,6 +17,50 @@
 </script>
 
 <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css'>
+
+
+<!-- start lightbox -->
+
+<link rel="stylesheet" href="colorbox.css">
+<link href="index.883.css" rel="stylesheet">
+
+<script src="scripts/jquery.colorbox-min.js"></script>
+<script>
+// Warning, global variable
+    var __savedHeight = 0;
+
+function resizeTheColorbox(height) {
+  if (height > 0) {
+    __savedHeight = new Number(height);
+    var newHeight = __savedHeight + 50; // addition is the submit button offset
+
+    $(".open-lightbox").colorbox.resize({
+      height : newHeight
+    });
+    }
+};
+
+// DOM Ready
+$(function() {
+// Colorbox plugin
+  $(".open-lightbox").colorbox({
+    "inline" : true,
+    "href": "#wufoo-form iframe",
+    "width": 500,
+    "innerHeight": $("#wufoo-form iframe").height()   // Only deals with initial load
+ });
+});
+
+$(document).bind('cbox_complete', function(){
+resizeTheColorbox(__savedHeight);
+});
+
+
+</script>
+
+<!-- end lightbox -->
+
+
 </head>
 
 <body>
@@ -36,13 +80,14 @@
         </ul>
     </div>-->
 
-<!-- <ul id="nav">
+<ul id="nav">
     <li><a href="#intro" title="Next Section">Intro</a></li>
     <li><a href="#second" title="Next Section">About</a></li>
-    <li><a href="#ceremony" title="Next Section">Ceremony</a></li>
-    <li><a href="#fourth" title="Next Section">RSVP</a></li>
+    <li><a href="#ceremony" title="Next Section">RSVP</a></li>
+    <li><a href="#fourth" title="Next Section">Accommodations</a></li>
     <li><a href="#fifth" title="Next Section">Registry</a></li>
-</ul> -->
+    <li><a href="#sixth" title="Next Section">Things to do in Green Bay</a></li>
+</ul>
 
     <div class='outer'>
         <div class='inner'>
@@ -150,42 +195,152 @@
             </div> <!--#third-->
 
             <div class='ceremony panel' id='ceremony'>
-                <h2>Save the date</h2>
+                <h2>RSVP</h2>
                 <div class='ornament ornament-top'></div>
                 <div class='date'>
                     August 31st, 2013
                 </div>
                 <div class='time'>
-                    More details to come
+                    5:30PM
                 </div>
                 <div class='location'>
                     Green Bay Distillery
-<!--                     <a href="#" alt='directions'>Get Directions</a>
- -->                </div>
+                    <a href="http://maps.google.com/maps?q=Green+Bay+Distillery,+Potts+Avenue,+Ashwaubenon,+WI&hl=en&ll=44.497137,-88.057501&spn=0.002502,0.005681&sll=40.697488,-73.979681&sspn=0.680932,1.454315&oq=green+bay+disti&hq=Green+Bay+Distillery,+Potts+Avenue,+Ashwaubenon,+WI&t=m&z=18&iwloc=A" alt='directions'>Get Directions</a>
+                </div>
+
+                <p>
+                    <a href="#wufoo-form" class="button open-lightbox">Click here to RSVP</a>
+                </p>
+                <div id="wufoo-form">
+                     <script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." :  "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js'  type='text/javascript'%3E%3C/script%3E"));</script>
+
+                       <script type="text/javascript">
+                         var s7p8a3 = new WufooForm();
+                         s7p8a3.initialize({
+                           'userName':'kerkmanpulec',
+                           'formHash':'z7x3p3',
+                           'autoResize':true,
+                           'resizeDone': resizeTheColorbox,
+                           'height':'395',
+                         'ssl':true
+                        });
+                         s7p8a3.display();
+
+                       </script>
+                </div>
+
                 <div class='ornament ornament-bottom'></div>
             </div>
 
             <div id="fourth" class='panel'>
-<!--                 <div class="story">
-                    <div class="bg"></div>
-                    <div class="float-left">
-                        <h2>RSVP</h2>
-                        <p><em>This section only works in modern browsers that support multiple backgrounds.</em></p>
-                        <p>The Nikebetterworld.com demo uses only CSS2 to create it's parallax effect. It uses empty containers in each section to give the impression of multiple backgrounds, which is the method I used for the image of the trainers. It's actually possible to achieve the same effect using CSS3s multiple backgrounds -- as I've done with the bubbles in this section, although, it will only work in modern browsers that support CSS3 multiple backgrounds.</p>
-                        <p>The use of CSS3 means less markup and jQuery, making the script slightly quicker.</p>
+                <div class="story">
+                    <div class="float-left" style='height:320px; top: 100px'>
+                        <div class="before">
+                            <div class='start'></div>
+                            <div class='middle'></div>
+                            <div class='end'></div>
+                        </div>
+                        <div class='about'>
+                            <div class='about-top'></div>
+                            <div class="about-middle">
+                                <h2>Accommodations</h2>
+                                <p>We have blocks reserved at two hotels, the Days Inn and the Best Western, under “Kerkman-Pulec Wedding”. To guarantee space, please make reservations at least one month before you intend to stay. Both hotels are within walking distance of the reception site.</p>
+                                <ul>
+                                    <li>
+                                        <ol>
+                                            <li>Day’s Inn</li>
+                                            <li>1978 Holmgren Way</li>
+                                            <li>920-498-8088</li>
+                                    </li>
+                                    <br />
+                                    <li>
+                                        <ol>
+                                            <li>Best Western</li>
+                                            <li>780 Armed Forces Dr.</li>
+                                            <li>920-499-3161</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class='about-bottom'></div>
+                        </div>
+                        <div class="after">
+                            <div class='start'></div>
+                            <div class='middle'></div>
+                            <div class='end'></div>
+                        </div>
                     </div>
                 </div>
- -->            </div> <!--#fourth-->
+            </div> <!--#fourth-->
 
-<!--             <div id="fifth">
-                <div class="story"><div class="bg"></div>
-                    <div class="float-right">
-                        <h2>Eventually Registry. Juust thanks for now?</h2>
-                        <p>The multiple backgrounds applied to this section are moved in a similar way to the first section -- every time the user scrolls down the page by a pixel, the positions of the backgrounds are changed.</p>
+            <div id="fifth" class='panel'>
+                <div class="story">
+                    <div class="float-right" style='height:98px; top: 270px'>
+                        <div class="before">
+                            <div class='start'></div>
+                            <div class='middle'></div>
+                            <div class='end'></div>
+                        </div>
+                        <div class='about'>
+                            <div class='about-top'></div>
+                            <div class="about-middle">
+                                <h2>Registry</h2>
+                                <p>Steve and Kelli are excited to celebrate in Wisconsin, but carrying gifts back home to NYC can be a hassle, and those bag fees add up! Plus, we have limited space at home.</p>
+                                <a href="https://knackregistry.com/registry/1057" class="button" style='margin-bottom:20px'>See the registry!</a>
+                            </div>
+                            <div class='about-bottom'></div>
+                        </div>
+                        <div class="after">
+                            <div class='start'></div>
+                            <div class='middle'></div>
+                            <div class='end'></div>
+                        </div>
                     </div>
                 </div>
             </div>
- -->        </div>
+
+            <div id="sixth" class='panel'>
+                <div class="story">
+                    <div class="float-left" style='height:580px; top: 50px'>
+                        <div class="before">
+                            <div class='start'></div>
+                            <div class='middle'></div>
+                            <div class='end'></div>
+                        </div>
+                        <div class='about'>
+                            <div class='about-top'></div>
+                            <div class="about-middle">
+                                <h2>Things to do in Green Bay</h2>
+                                <br />
+                                <ul>
+                                    <li>
+                                        <h3><a href="http://www.baybeach.org/">Bay Beach Amusement Park</a></h3>
+                                        <h5>1313 Bay Beach Road, Green Bay</h5>
+                                        <p>Bay Beach is one of Green Bay's most popular and affordable attractions offering 18 exciting rides for all ages. Food available at 2 concession areas, fast food restaurant in main pavilion.</p>
+                                    </li>
+                                    <li>
+                                        <h3><a href="http://www.packers.com/lambeau-field/stadium-tours.html">Lambeau Field Stadium Tours</a></h3>
+                                        <h5>1265 Lombardi Ave., Green Bay</h5>
+                                        <p>On a Lambeau Field stadium tour, you'll pass through a game-day suite, walk through the players' tunnel, sit in the bleachers and learn all about the incredible history of the Green Bay Packers.</p>
+                                    </li>
+                                    <li>
+                                        <h3><a href="http://www.baybeachwildlife.com/">Bay Beach Wildlife Sanctuary</a></h3>
+                                        <h5>1660 East Shore Dr., Green Bay</h5>
+                                        <p>A 700-acre urban wildlife refuge featuring live bird and animal exhibits, educational displays, miles of hiking and walking trails, excellent wildlife viewing opportunities and waterfowl feeding. There is no admission charge.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class='about-bottom'></div>
+                        </div>
+                        <div class="after">
+                            <div class='start'></div>
+                            <div class='middle'></div>
+                            <div class='end'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 <script type="text/javascript">
