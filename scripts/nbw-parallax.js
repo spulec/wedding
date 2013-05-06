@@ -26,13 +26,14 @@ if (screen.width > 1024) {
 		var $fourthBG = $('#fourth');
 		var $fifthBG = $('#fifth');
 		var $sixthBG = $('#sixth');
+		var $eighthBG = $('#eighth');
 		var trainers = $("#second .bg");
 		var balloons = $("#fourth .bg");
 
 		var windowHeight = $window.height(); //get the height of the window
 
 		//apply the class "inview" to a section that is in the viewport
-		$('#intro, #second, #third, #fourth, #fifth, sixthBG').bind('inview', function (event, visible) {
+		$('#intro, #second, #third, #fourth, #fifth, sixthBG, #eighth').bind('inview', function (event, visible) {
 				if (visible == true) {
 				$(this).addClass("inview");
 				} else {
@@ -75,15 +76,15 @@ if (screen.width > 1024) {
 			//if the second section is in view...
 			if($secondBG.hasClass("inview")){
 				//call the newPos function and change the background position
-				$secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 3150, 0.3)});
+				$secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 4550, 0.3)});
 				//call the newPos function and change the secnond background position
-				trainers.css({'backgroundPosition': newPos(50, windowHeight, pos, 3800, 0.6)});
+				trainers.css({'backgroundPosition': newPos(50, windowHeight, pos, 4800, 0.6)});
 			}
 
 			//if the third section is in view...
 			if($thirdBG.hasClass("inview")){
 				//call the newPos function and change the background position
-				$thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 4850, 0.3)});
+				$thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 6450, 0.3)});
 			}
 
 			//if the fourth section is in view...
@@ -105,8 +106,14 @@ if (screen.width > 1024) {
 
 			if($sixthBG.hasClass("inview")){
 				//call the newPos function and change the background position
-				$sixthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 5450, 0.3)});
+				$sixthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 6450, 0.3)});
 			}
+
+			if($eighthBG.hasClass("inview")){
+				//call the newPos function and change the background position
+				$eighthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 4000, 0.6)});
+			}
+
 
 			$('#pixels').html(pos); //display the number of pixels scrolled at the bottom of the page
 		}

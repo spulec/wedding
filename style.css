@@ -252,7 +252,7 @@ h2{
     font-family: 'Folio Condensed Bold', Impact, Arial bold, sans-serif;
 }
 
-.ceremony .location {
+.location {
     background: url(images/place_pin.png) 0 60px no-repeat transparent;
     color: #809498;
     font-size: 1.1em;
@@ -266,7 +266,7 @@ h2{
     zoom: 1;
 }
 
-.ceremony .location a {
+.location a {
     font-size: 0.75em;
     font-family: Arial;
     font-weight: bold;
@@ -455,6 +455,13 @@ h2{
 #sixth{
   background: url(images/seventh.jpg) 50% 0 no-repeat fixed;
   height: 1000px;
+  margin-top: 0px;
+  padding: 200px 0 0 0;
+}
+
+#eighth{
+  background: url(images/eighth.jpg) 50% 0 no-repeat fixed;
+  height: 1250px;
   margin-top: 0px;
   padding: 200px 0 0 0;
 }
