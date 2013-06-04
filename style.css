@@ -297,6 +297,7 @@ h2{
 	right: 20px;
   -moz-border-radius: 15px;
   border-radius: 15px;
+  z-index: 1000;
 }
 
 #nav li{
